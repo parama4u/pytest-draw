@@ -28,3 +28,4 @@ def pytest_collection_modifyitems(session, config, items):
         return
     random = Random()
     random.shuffle(items)
+    session.items = random.sample(items, int(config.option.max_test))
