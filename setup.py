@@ -15,7 +15,7 @@ setup(
         "pytest",
     ],
     classifiers= [
-                "Development Status :: 1 - Planning",
+                "Development Status :: 3 - Alpha",
                 "Programming Language :: Python :: 3",
                 "Framework :: Pytest",
                 "Framework :: Robot Framework :: Library",
