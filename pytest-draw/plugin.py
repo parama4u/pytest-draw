@@ -1,4 +1,5 @@
 from random import Random
+
 def pytest_addoption(parser):
     group = parser.getgroup("sanity", "sanity tests to run")
     group.addoption('--sanity',
@@ -15,11 +16,9 @@ def pytest_addoption(parser):
                     help="Maximum tests to run. Defaults to 5"
                     )
 
-
 def pytest_report_header(config):
     if config.option.sanity:
         return f"Configured for Sanity. Max tests would be:{config.option.max_test}"
-
 
 def pytest_collection_modifyitems(session, config, items):
     """ called after collection has been performed, may filter or re-order
