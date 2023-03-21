@@ -1,17 +1,18 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='pytest-draw',
-    version='0.3',
-    packages=['pytest-draw'],
-    url='https://github.com/parama4u/pytest-sanity',
+    version='0.1',
+    packages=['pytest_draw'],
+    entry_points={'pytest11': ['pytest_draw = pytest_draw.plugin']},
+    url='https://github.com/parama4u/pytest-draw',
     author='Param',
+    description='Pytest plugin for randomly selecting a specific number of tests',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     author_email="parama4u@gmail.com",
-    py_modules=['pytest-draw/plugin'],
-    entry_points={'pytest': ['pytest_sanity = pytest-draw/plugin']},
     install_requires=[
-        "pytest>=5.0.0",
-
+        "pytest",
     ],
     classifiers= [
                 "Development Status :: 1 - Planning",
